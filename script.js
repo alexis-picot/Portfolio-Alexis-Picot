@@ -79,21 +79,22 @@ if (carrousel) {
     actualiserCarrousel();
 }
 
-
-/* VISIONNEUSE */
-
 const visionneuse = document.querySelector(".visionneuse");
 
 if (visionneuse) {
     const imageAgrandie = visionneuse.querySelector("img");
     const boutonFermer = visionneuse.querySelector(".fermer-visionneuse");
-
+    const boutonTelecharger = visionneuse.querySelector(".telecharger-image");
     const imagesCarrousel = document.querySelectorAll(".carrousel-slide img");
 
     imagesCarrousel.forEach((image) => {
         image.addEventListener("click", () => {
             imageAgrandie.src = image.src;
             imageAgrandie.alt = image.alt;
+
+            boutonTelecharger.href = image.src;
+            boutonTelecharger.download = image.getAttribute("src").split("/").pop();
+
             visionneuse.classList.add("active");
         });
     });
