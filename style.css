@@ -352,33 +352,26 @@ p+p {
 .titre-avec-icone a:visited {
     color: #1b1b1b;
     text-decoration: none;
-    animation: invitation-clic 7s infinite;
+    animation: invitation-clic 3s infinite;
 }
 
 @keyframes invitation-clic {
 
     0%,
+    20%,
     100% {
         transform: translateX(0);
     }
 
-    2% {
+    5%,
+    15% {
         transform: translateX(7px);
     }
 
-    4% {
-        transform: translateX(0);
-    }
-
-    6% {
-        transform: translateX(7px);
-    }
-
-    8% {
+    10% {
         transform: translateX(0);
     }
 }
-
 
 .carrousel {
     position: relative;
@@ -702,4 +695,54 @@ p+p {
 
 h2 {
     font-family: 'sifonn';
+}
+
+.image-figure {
+    width: 100%;
+    max-width: 780px;
+    margin: 30px auto;
+}
+
+.image-figure .image-maquette {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-figure figcaption {
+    margin-top: 10px;
+    text-align: left;
+    font-family: 'poppins';
+    font-size: 0.85rem;
+    color: #1b1b1b;
+}
+
+.image-presentation {
+    width: 100%;
+    max-width: 780px;
+    margin: 30px auto;
+}
+
+.image-presentation .image-maquette {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-presentation figcaption {
+    margin-top: 10px;
+    text-align: left;
+    font-family: 'poppins';
+    font-size: 0.85rem;
+    color: #1b1b1b;
+}
+
+.image-interactive {
+    border-radius: 8px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-interactive:hover {
+    transform: translateX(5px) scale(1.02);
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
 }
